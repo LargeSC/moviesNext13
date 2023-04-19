@@ -20,8 +20,8 @@ export default function RootLayout({ children }) {
       <body className={`${montserrat.className}`}>
         <Nav />
         <div className="mx-16">{children}</div>
-        <footer className="flex mt-32 justify-end items-center p-8">
-          <p className=" text-sm pr-1">Website built using: </p>
+        <footer className="flex mt-32 justify-end items-center p-8 space-x-2">
+          <p className=" text-sm">Website built using: </p>
           <a href="https://www.themoviedb.org/">
             <Image
               src="/themoviedb_logo.svg"

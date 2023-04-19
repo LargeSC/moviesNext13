@@ -1,9 +1,4 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "./page.module.css";
 import Movie from "./Movie";
-
-const inter = Inter({ subsets: ["latin"] });
 
 // https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1
 

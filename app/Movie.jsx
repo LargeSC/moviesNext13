@@ -6,14 +6,14 @@ export default function Movie({ id, title, poster, release, rating }) {
   return (
     <div className={`flex flex-col items-center`}>
       <h2 className=" truncate font-bold">{title}</h2>
-      <p className=" text-sm">Rating: {rating.toFixed(1)}</p>
+      <p className=" text-sm mb-2">Rating: {rating.toFixed(1)}</p>
       <Link href={`/${id}`}>
         <Image
           src={imagePath}
           alt={title}
           width="800"
           height="600"
-          className="rounded-md shadow-md"
+          className="rounded-md shadow-md hover:scale-105 transition-all"
         />
       </Link>
     </div>

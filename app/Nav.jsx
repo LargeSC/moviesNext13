@@ -1,19 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Nav = () => (
-  <nav className="py-4 px-6 text-lg shadow-md">
-    <ul className="flex space-x-3">
-      <Link
-        href="/"
-        className={`block px-3 py-2 rounded-md border-solid border-2 border-primary-200`}
-      >
-        Home
-      </Link>
-      <Link
-        href="/about"
-        className={`block px-3 py-2 rounded-md border-solid border-2 border-primary-200`}
-      >
-        About
+  <nav className=" px-6 text-lg shadow-sm">
+    <ul className="flex space-x-2">
+      <Link href="/" className={`block hover:scale-110 transition-all`}>
+        <Image
+          src="/logo/logo_white_large.png"
+          alt="Movie App logo"
+          width="100"
+          height="100"
+        />
       </Link>
     </ul>
   </nav>
