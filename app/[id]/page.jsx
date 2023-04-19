@@ -23,21 +23,24 @@ const MovieDetails = async ({ params }) => {
 
   return (
     <div>
-      <div>
-        <h2 className=" text-2xl">{res.title} </h2>
-        <h3 className=" text-lg">Rel date: {res.release_date}</h3>
-        <p className=" text-sm">Runtime: {res.runtime} min</p>
-        <p className=" text-sm bg-green-600 inline-block my-2 px-2 py-1 rounded">
-          {res.status}
-        </p>
+      <h2 className=" text-2xl  font-bold uppercase mt-10">{res.title} </h2>
+      <div className="md:flex my-2">
         <Image
-          className="my-10"
+          className="aspect-auto rounded-lg shadow-md"
           src={imagePath}
           alt={res.title}
           width="800"
           height="600"
         />
-        <p className=" text-sm">{res.overview}</p>
+        <div className="flex-col my-2 md:my-0 md:mx-8">
+          <h3 className=" text-sm mb-1">Release date: {res.release_date}</h3>
+          <p className=" text-sm mb-1">Runtime: {res.runtime} min</p>
+          <p className=" text-sm mb-1">Rating: {res.vote_average.toFixed(1)}</p>
+          <p className=" text-sm text-white bg-green-600 inline-block my-2 px-2 py-1 rounded">
+            {res.status}
+          </p>
+          <p className=" text-base md:text-lg">{res.overview}</p>
+        </div>
       </div>
     </div>
   );

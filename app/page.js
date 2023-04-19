@@ -15,7 +15,7 @@ export default async function Home() {
 
   return (
     <main>
-      <div className=" grid gap-16 grid-cols-fluid">
+      <div className=" grid gap-16 grid-cols-fluid mt-6">
         {res.results.map((movie) => (
           <Movie
             key={movie.id}
@@ -23,6 +23,7 @@ export default async function Home() {
             title={movie.title}
             poster={movie.poster_path}
             release={movie.release_date}
+            rating={movie.vote_average}
           />
         ))}
       </div>
