@@ -25,7 +25,7 @@ const MovieDetails = async ({ params }) => {
     `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${process.env.API_KEY}&page=1`
   );
   const resSimilar = await dataSimilar.json();
-  const hasSimilars = resSimilar.results.length !== 0;
+  const hasSimilars = resSimilar?.results?.length !== 0;
 
   return (
     <div>
