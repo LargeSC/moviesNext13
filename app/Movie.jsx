@@ -7,8 +7,8 @@ export default function Movie({ id, title, poster, release, rating }) {
     <div
       className={`flex flex-col items-center hover:scale-105 transition-all`}
     >
-      <h2 className=" truncate font-bold">{title}</h2>
-      <p className=" text-sm mb-2">Rating: {rating.toFixed(1)}</p>
+      <h2 className="truncate font-bold">{title}</h2>
+      <p className="text-sm mb-2">Rating: {rating.toFixed(1)}</p>
       <Link href={`/${id}`}>
         <Image
           src={imagePath}

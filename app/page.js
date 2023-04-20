@@ -1,17 +1,14 @@
+import useData from "./hooks/useData";
 import Movie from "./Movie";
 
-// https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1
-
 export default async function Home() {
-  const data = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`
-  );
-  const res = await data.json();
+  const { data } = await useData("movie/popular");
 
   return (
     <main>
+      <h2 className=" text-2xl  font-bold uppercase mt-10">Popular movies:</h2>
       <div className=" grid gap-16 grid-cols-fluid mt-6">
-        {res.results.map((movie) => (
+        {data.results.map((movie) => (
           <Movie
             key={movie.id}
             id={movie.id}
